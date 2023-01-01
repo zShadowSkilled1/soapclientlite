@@ -1553,9 +1553,9 @@ game:GetService("ReplicatedStorage").Common.Library.Network.RemoteEvent:FireServ
         task.spawn(function()
             if shared.noinject == nil then
                 repeat task.wait() until game:IsLoaded()
-                repeat task.wait(5) until isfile("vapelite.injectable.txt")
-                delfile("vapelite.injectable.txt")
-                loadstring(readfile("vapelite.lua"))()
+                repeat task.wait(5) until isfile("soapclientlite.txt")
+                delfile("soapclientlite.txt")
+                loadstring(readfile("soapclientlite.lua"))()
             end
         end)
     end
