@@ -136,27 +136,27 @@ local uninjectfunc = lplr.OnTeleport:connect(function(state)
 end)
 
 if suc and type(web) ~= "boolean" then
-    local vapelite
-    local vapelite2
+    local soapclientlite
+    local soapclientlite2
     local draw
     local textguitextdrawings = {}
     local textguitextdrawings2 = {}
     pcall(function()
         draw = Drawing.new("Text")
         draw.Visible = false
-        vapelite = Drawing.new("Image")
-        vapelite2 = Drawing.new("Image")
-        local logocheck = syn and syn.toast_notification == nil and "VapeLiteLogoSyn.png" or "VapeLiteLogo.png"
-        vapelite.Data = shared.VapeDeveloper and readfile(logocheck) or game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeLiteForRoblox/main/"..logocheck, true) or ""
-        vapelite.Size = Vector2.new(140, 64)
-        vapelite.ZIndex = 2
-        vapelite.Position = Vector2.new(3, 36)
-        vapelite.Visible = false
-        vapelite2.Data = shared.VapeDeveloper and readfile("VapeLiteLogoShadow.png") or game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeLiteForRoblox/main/VapeLiteLogoShadow.png", true) or ""
-        vapelite2.Size = Vector2.new(140, 64)
-        vapelite2.Position = Vector2.new(5, 38)
-        vapelite2.ZIndex = 1
-        vapelite2.Visible = false
+        soapclientlite = Drawing.new("Image")
+        soapclientlite2 = Drawing.new("Image")
+        local logocheck = syn and syn.toast_notification == nil and "soapclientliteLogoSyn.png" or "soapclientliteLogo.png"
+        soapclientlite.Data = shared.VapeDeveloper and readfile(logocheck) or game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/soapclientliteForRoblox/main/"..logocheck, true) or ""
+        soapclientlite.Size = Vector2.new(140, 64)
+        soapclientlite.ZIndex = 2
+        soapclientlite.Position = Vector2.new(3, 36)
+        soapclientlite.Visible = false
+        soapclientlite2.Data = shared.VapeDeveloper and readfile("soapclientliteLogoShadow.png") or game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/soapclientliteForRoblox/main/soapclientliteLogoShadow.png", true) or ""
+        soapclientlite2.Size = Vector2.new(140, 64)
+        soapclientlite2.Position = Vector2.new(5, 38)
+        soapclientlite2.ZIndex = 1
+        soapclientlite2.Visible = false
     end)
     local robloxgui = game:GetService("CoreGui"):WaitForChild("RobloxGui", 10)
 
@@ -193,8 +193,8 @@ if suc and type(web) ~= "boolean" then
                 end)
             end
             local num = 0
-            vapelite.Position = Vector2.new((robloxgui.AbsoluteSize.X - 4) - 140, 36)
-            vapelite2.Position = Vector2.new((robloxgui.AbsoluteSize.X - 4) - 139, 37)
+            soapclientlite.Position = Vector2.new((robloxgui.AbsoluteSize.X - 4) - 140, 36)
+            soapclientlite2.Position = Vector2.new((robloxgui.AbsoluteSize.X - 4) - 139, 37)
             for i,v in pairs(tableofmodules) do 
                 local newpos = robloxgui.AbsoluteSize.X - 4
                 local draw = Drawing.new("Text")
@@ -225,8 +225,8 @@ if suc and type(web) ~= "boolean" then
 
     local textguiconnection
     local textgui = addModule("TextGUI", "Shows enabled modules", function(callback)
-        vapelite.Visible = callback
-        vapelite2.Visible = callback
+        soapclientlite.Visible = callback
+        soapclientlite2.Visible = callback
         if callback then 
             textguiconnection = robloxgui:GetPropertyChangedSignal("AbsoluteSize"):connect(function()
                 UpdateHud()
